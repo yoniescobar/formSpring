@@ -3,20 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
 </head>
 <body>
-    <div align="center">
-       <h1>Registro de Estudiantes</h1>
 
-        <form action="#" th:action="@{/registro}" method="post" th:object="${estudiante}">
-            <label >Nombre Completo: </label>
-            <input type="text" th:field="*{nombre}"/>
-
-        </form>
+        <div class="container py-5">
+            <h1 class="py-5">Ejercicios con Formularios</h1>
+            <a  href="registro" type="button" class="btn btn-primary" >Registro Estudiante</a>
+            <button type="button" class="btn btn-warning fa-solid fa-pen" ><i class="">Registro Clientes</i></button>
+        </div>
 
 
-
-      <a href="/registro">Registrar Estudiante</a>
-    </div>
 </body>
 </html>

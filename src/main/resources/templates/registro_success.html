@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/24c7687a86.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+  <h1 class="display-3 py-2">Registro Guardo con exito</h1>
+
+    <span class="h3">Correo:</span> <span class="h4" th:text="${estudiante.correo}"></span> <br/>
+    <h3 class="h3" th:text="${estudiante.nombre}"></h3> <br/>
+    <h3 class="h3" th:text="${estudiante.fechaNacimiento}"></h3> <br/>
+    <h3 class="h3" th:text="${estudiante.genero}? 'Femenino':'Masculino'"></h3> <br/>
+    <h3 class="h3" th:text="${estudiante.carrera}"></h3> <br/>
+    <h3 class="h3" th:text="${estudiante.observaciones}"></h3> <br/>
+
+  <a href="index" class="btn btn-info"><i class="fa-solid fa-pen">Regresar index</i></a>
+
+</div>
+
+
+
+</body>
+</html>
