@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+</head>
+<body>
+
+<div align="center">
+    <h1 class="py-5">Registro de Estudiantes</h1>
+
+    <div class="container px-5">
+        <form action="#" th:action="@{/registro}" method="post" th:object="${estudiante}">
+
+            <div class = "form-row">
+                <div class="form-group col-md-6">
+                    <label for="nombre">Nombre Completo: </label>
+                    <input type="text"  class="form-control" id="nombre" th:field="*{nombre}"  placeholder="nombre completo"/>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="email" >Email:</label>
+                    <input type="email"  class="form-control" id="email" th:field="*{correo}" placeholder="ejemplo@domio.com"/>
+                </div>
+            </div>
+
+
+            <div class="form-group">
+                <label> Fecha de Nacimiento:</label>
+                <input type="date" th:field="*{fechaNacimiento}"  class="form-control" /><br/>
+            </div>
+
+            <div class="form-group">
+                <label>Sexo:</label>
+                <input type="radio" th:field="*{genero}" value=0 checked />Masculino
+                <input type="radio" th:field="*{genero}" value=1 />Femenino<br/>
+
+            </div>
+
+
+            <div class="form-group">
+                <label> Carrera: </label>
+                <select class="form-control form-control-md" >
+                    <option value="1">Ingenieria de Sistemas</option>
+                    <option value="2">Ingenieria de Software</option>
+                    <option value="3">Ingenieria de Telecomunicaciones</option>
+                </select><br/>
+            </div>
+
+            <div class="form-group">
+                <label>Observacion</label>
+            </div>
+
+
+            <div class="form-group">
+                <textarea th:field="*{observaciones}"  class="form-control" ></textarea>
+
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Registrar</button>
+                <button type="reset" class="btn btn-danger">Cancelar</button>
+            </div>
+
+
+
+        </form>
+    </div>
+
+
+
+
+
+
+    <a href="/registro">Registrar Estudiante</a>
+
+</body>
+</html>

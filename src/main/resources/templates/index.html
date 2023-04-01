@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div align="center">
+       <h1>Registro de Estudiantes</h1>
+
+        <form action="#" th:action="@{/registro}" method="post" th:object="${estudiante}">
+            <label >Nombre Completo: </label>
+            <input type="text" th:field="*{nombre}"/>
+
+        </form>
+
+
+
+      <a href="/registro">Registrar Estudiante</a>
+    </div>
+</body>
+</html>
